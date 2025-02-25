@@ -78,4 +78,20 @@ select {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+header.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 80px;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+}
+header.header nav.header-menu {
+  display: flex;
+  gap: 60px;
+}
+header.header nav.header-menu a {
+  padding: 8px 3px;
 }/*# sourceMappingURL=App.css.map */
