@@ -17,7 +17,6 @@ const Button = ({
   padding,
   children
 }: buttonInterface) => {
-  // Якщо bgColor передано у вигляді hex або тексту, конвертуй в rgba
   const getRGBA = (color: string, opacity: number) => {
     if (color.startsWith("#")) {
       const r = parseInt(color.slice(1, 3), 16);
@@ -25,7 +24,7 @@ const Button = ({
       const b = parseInt(color.slice(5, 7), 16);
       return `rgba(${r}, ${g}, ${b}, ${opacity})`;
     }
-    return color; // Якщо це вже rgba або інший формат
+    return color;
   };
 
   return (
@@ -38,7 +37,14 @@ const Button = ({
         padding: padding,
         display: "flex",
         justifyContent: "center",
-        alignItems: "center"
+        alignItems: "center",
+        transition: "background-color 0.3s ease"
+      }}
+      onMouseEnter={(e) => {
+        (e.target as HTMLButtonElement).style.backgroundColor = getRGBA(bgColor, bgOpacity + 0.2);
+      }}
+      onMouseLeave={(e) => {
+        (e.target as HTMLButtonElement).style.backgroundColor = getRGBA(bgColor, bgOpacity);
       }}
     >
       {children}

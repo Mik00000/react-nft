@@ -10,9 +10,37 @@ header.header{
         display: flex;
         gap:60px;
 
-        a{
-            
+        a {
+            position: relative;
             padding: 8px 3px;
+            font-weight: 500;
+            font-size: 18px;
+            letter-spacing: 0.02em;
+            color: #f5fbf2;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 2px; // товщина бордера
+                background-color: #FFCE4E;
+                transform: scaleX(0);
+                transform-origin: left;
+                transition: transform 0.3s ease-in-out;
+            }
+        
+            &:hover {
+                color: #FFCE4E;
+        
+                &::after {
+                    transform: scaleX(1);
+                }
+            }
         }
+        
     }   
 }
