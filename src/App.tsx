@@ -7,13 +7,25 @@ import {
   Navigate,
 } from "react-router-dom";
 import Header from "./sections/Header";
+import Hero from "./sections/Hero";
+import Partners from "./sections/Partners";
 
 function App() {
   return (
     <Router>
       <div className="App">
         <Header />
-        <Routes></Routes>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Hero />
+                <Partners />
+              </>
+            }
+          />
+        </Routes>
       </div>
     </Router>
   );

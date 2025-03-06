@@ -1,0 +1,138 @@
+.hero {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 60px;
+  margin-bottom: 200px;
+  .left-part,
+  .right-part {
+    flex: 1;
+    width: 50%;
+  }
+  .left-part {
+    padding: 265px 40px 8px 20px;
+
+    display: flex;
+    flex-direction: column;
+    .top-part {
+      margin-bottom: 120px;
+      h1 {
+        font-weight: 700;
+        font-size: 85px;
+        line-height: 153%;
+        color: #f5fbf2;
+        padding-bottom: 75px;
+        span {
+          color: #ffce4e;
+        }
+      }
+      .buttons {
+        display: flex;
+        gap: 48px;
+      }
+    }
+    .bottom-part {
+      display: flex;
+      gap: 100px;
+      .stat-number {
+        display: flex;
+        flex-direction: column;
+        strong {
+          font-weight: 700;
+          font-size: 62px;
+          color: #f5fbf2;
+        }
+        span {
+          font-weight: 400;
+          font-size: 24px;
+          line-height: 148%;
+          color: #9b9e9a;
+        }
+      }
+    }
+  }
+  .right-part {
+    backdrop-filter: blur(30px);
+    background: rgba(79, 70, 78, 0.45);
+    padding: 240px 0 100px 60px;
+    .auction-card {
+      width: 556px;
+      display: flex;
+      flex-direction: column;
+      .top-part {
+        padding: 25px 22px 0 22px;
+        display: flex;
+        justify-content: flex-start;
+        background: url("../assets/images/banners/Group\ 36652.png");
+
+        height: 576px;
+        .info {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0 40px;
+          height: fit-content;
+          width: 100%;
+          backdrop-filter: blur(45px);
+          box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.12);
+          background: linear-gradient(
+            145deg,
+            rgba(255, 137, 61, 0.09) 0%,
+            rgba(250, 250, 250, 0.65) 100%
+          );
+          opacity: 0.95;
+
+          .info-cell {
+            display: flex;
+            flex-direction: column;
+            .name {
+              font-weight: 500;
+              font-size: 18px;
+              letter-spacing: 0.08em;
+              text-transform: capitalize;
+              color: #e4dee7;
+            }
+            .value {
+              font-weight: 700;
+              font-size: 32px;
+              color: #fff;
+            }
+          }
+        }
+      }
+      .bottom-part {
+        width: 100%;
+        height: 142px;
+        background-color: #ffff;
+        padding: 0 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .name {
+          display: flex;
+          flex-direction: column;
+          align-items: start;
+          span:first-child {
+            font-weight: 600;
+            font-size: 28px;
+            letter-spacing: 0.07em;
+            color: #16091b;
+          }
+          span:last-child {
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 148%;
+            color: #594d5e;
+          }
+        }
+        .start-bit {
+          button {
+            font-weight: 700;
+            font-size: 24px;
+            color: #000;
+          }
+        }
+      }
+    }
+  }
+}

@@ -46,12 +46,34 @@ const Hero = () => {
       </div>
       <div className="right-part">
         <div className="auction-card">
-            <div className="top-part">
-                <div className="info"></div>
+          <div className="top-part">
+            <div className="info">
+              <div className="info-cell">
+                <div className="name">Current bid</div>
+                <div className="value">0.99 ETH</div>
+              </div>
+              <div className="info-cell">
+                <div className="name">Ends in</div>
+                <div className="value">25 hrs</div>
+              </div>
             </div>
-            <div className="bottom-part">
-                <div className="name"></div>
+          </div>
+          <div className="bottom-part">
+            <div className="name">
+              <span>Artis</span>
+              <span>@wzard</span>
             </div>
+            <div className="start-bit">
+              <Button
+                bgColor="#FFCE4E"
+                textColor="#000000"
+                padding="23px 44px"
+                borderColor="#FFCE4E"
+              >
+                Start bit
+              </Button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
