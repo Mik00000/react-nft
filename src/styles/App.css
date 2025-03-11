@@ -83,11 +83,13 @@ header.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40px 80px;
+  padding: 20px 80px;
   position: fixed;
   width: 100vw;
   top: 0;
   z-index: 10;
+  -webkit-backdrop-filter: blur(30px);
+          backdrop-filter: blur(30px);
 }
 header.header nav.header-menu {
   display: flex;
@@ -254,6 +256,16 @@ header.header nav.header-menu a:hover::after {
   color: #000;
 }
 
+.partners {
+  margin-bottom: 100px;
+}
+.partners .brands {
+  margin: 0 auto;
+  width: 1235px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 body {
   background: #1C121F;
 }/*# sourceMappingURL=App.css.map */

@@ -2,11 +2,12 @@ header.header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 40px 80px;
+    padding: 20px 80px;
     position: fixed;
     width: 100vw;
     top:0;
     z-index: 10;
+    backdrop-filter: blur(30px);
     nav.header-menu{
         display: flex;
         gap:60px;
