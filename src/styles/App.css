@@ -266,6 +266,27 @@ header.header nav.header-menu a:hover::after {
   align-items: center;
   justify-content: space-between;
 }
+.heading {
+  position: relative;
+  font-weight: 700;
+  font-size: 64px;
+  color: #f5fbf2;
+}
+.heading::before {
+  content: "";
+  position: absolute;
+  width: 110px;
+  height: 100px;
+  border-radius: 100%;
+  background-color: var(--buble-color);
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.heading [data-buble-color] {
+  --buble-color: attr(data-buble-color);
+}
+
 body {
   background: #1C121F;
 }/*# sourceMappingURL=App.css.map */
