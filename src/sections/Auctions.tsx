@@ -5,13 +5,14 @@ import { Carousel } from "@mantine/carousel";
 
 import userIcon from "../assets/images/users/user-icon.png";
 
-import aucton1 from "../assets/images/cards/auction-1.png";
-import aucton2 from "../assets/images/cards/auction-2.png";
-import aucton3 from "../assets/images/cards/auction-3.png";
+import auction1 from "../assets/images/cards/auction-1.png";
+import auction2 from "../assets/images/cards/auction-2.png";
+import auction3 from "../assets/images/cards/auction-3.png";
 
+import likeIcon from "../assets/images/icons/like.svg"
 const cards = [
   {
-    img: aucton1,
+    img: auction1,
     price: "4.89 ETH",
     likes: 92,
     time: "03:18:24",
@@ -20,7 +21,7 @@ const cards = [
     authorImage: userIcon,
   },
   {
-    img: aucton2,
+    img: auction2,
     price: "4.89 ETH",
     likes: 92,
     time: "03:18:24",
@@ -29,7 +30,7 @@ const cards = [
     authorImage: userIcon,
   },
   {
-    img: aucton3,
+    img: auction3,
     price: "4.89 ETH",
     likes: 92,
     time: "03:18:24",
@@ -56,10 +57,21 @@ const Auctions = () => {
           <Carousel.Slide>
             <div className="card">
               <div className="image" style={{
-                backgroundImage:card.img
+                backgroundImage:`url(${card.img})`
               }}>
                 <span className="timer">{card.time}</span>
               </div>
+              <div className="title">
+                <div className="author">
+                    <span className="author-name">{card.authorName}</span>
+                    <span className="author-tag">by {card.authorTag}</span>
+                </div>
+                <div className="likes">
+                
+                </div>
+              </div>
+              <div className="price"></div>
+              <div className="place-bid"></div>
             </div>
           </Carousel.Slide>
         ))}
