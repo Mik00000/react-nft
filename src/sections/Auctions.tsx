@@ -11,6 +11,9 @@ import auction3 from "../assets/images/cards/auction-3.png";
 
 import likeIcon from "../assets/images/icons/like.svg";
 import Button from "../components/Button";
+
+import { ReactComponent as ArrowLeft } from "../assets/images/icons/arrowLeft.svg";
+import { ReactComponent as ArrowRight } from "../assets/images/icons/arrowRight.svg";
 const cards = [
   {
     img: auction1,
@@ -46,13 +49,15 @@ const Auctions = () => {
       <Heading bubleColor="#8613A5">Live Auctions</Heading>
 
       <Carousel
-        slideSize="70%"
+        slideSize="30%"
         height={691}
         align="start"
-        slideGap="md"
+        slideGap="45px"
         controlsOffset="xs"
         controlSize={40}
         loop
+        nextControlIcon={<ArrowRight width={"54px"} height={"54px"}/>}
+        previousControlIcon={<ArrowLeft width={"54px"} height={"54px"} />}
       >
         {cards.map((card) => (
           <Carousel.Slide>
@@ -65,6 +70,7 @@ const Auctions = () => {
               >
                 <span className="timer">{card.time}</span>
               </div>
+
               <div className="title">
                 <div className="author">
                   <div className="left-part">

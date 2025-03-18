@@ -6,14 +6,32 @@
   gap: 80px;
   .heading {
   }
+  .mantine-Carousel-root {
+    display: flex;
+    flex-direction: column;
 
+    .mantine-Carousel-controls {
+      order: -1;
+      display: flex;
+      justify-content: flex-end;
+      gap: 28px;
+      position: relative;
+      padding: 0 80px 42px 0;
+      .mantine-Carousel-control{
+        background: none;
+        &:hover{
+          opacity: 0.5;
+        }
+      }
+    }
+  }
   .mantine-Carousel-slide {
     .card {
       height: 100%;
       display: flex;
       flex-direction: column;
       padding: 32px;
-      gap: 28px;
+      justify-content: space-between;
       width: 495px;
       background: #3d2942;
 
@@ -84,7 +102,6 @@
             }
           }
           .right-part {
-
             .likes {
               display: flex;
               gap: 12px;
@@ -105,15 +122,31 @@
       }
 
       .price {
-       span:first-child {
- 
+        display: flex;
+        justify-content: space-between;
+        span:first-child {
+          font-weight: 400;
+          font-size: 24px;
+          line-height: 100%;
+          color: #c6bfc8;
         }
         .price-value {
+          font-weight: 700;
+          font-size: 24px;
+          line-height: 100%;
+          color: #f5fbf2;
         }
       }
 
       .place-bid {
         button {
+          width: 100%;
+
+          font-weight: 500;
+          font-size: 24px;
+          line-height: 100%;
+          letter-spacing: 0.05em;
+          color: #fff;
         }
       }
     }

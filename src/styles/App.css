@@ -273,12 +273,30 @@ header.header nav.header-menu a:hover::after {
   padding-right: 0;
   gap: 80px;
 }
+.auctions .mantine-Carousel-root {
+  display: flex;
+  flex-direction: column;
+}
+.auctions .mantine-Carousel-root .mantine-Carousel-controls {
+  order: -1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 28px;
+  position: relative;
+  padding: 0 80px 42px 0;
+}
+.auctions .mantine-Carousel-root .mantine-Carousel-controls .mantine-Carousel-control {
+  background: none;
+}
+.auctions .mantine-Carousel-root .mantine-Carousel-controls .mantine-Carousel-control:hover {
+  opacity: 0.5;
+}
 .auctions .mantine-Carousel-slide .card {
   height: 100%;
   display: flex;
   flex-direction: column;
   padding: 32px;
-  gap: 28px;
+  justify-content: space-between;
   width: 495px;
   background: #3d2942;
 }
@@ -354,6 +372,31 @@ header.header nav.header-menu a:hover::after {
   color: #76607a;
   margin-bottom: 5px;
 }
+.auctions .mantine-Carousel-slide .card .price {
+  display: flex;
+  justify-content: space-between;
+}
+.auctions .mantine-Carousel-slide .card .price span:first-child {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 100%;
+  color: #c6bfc8;
+}
+.auctions .mantine-Carousel-slide .card .price .price-value {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 100%;
+  color: #f5fbf2;
+}
+.auctions .mantine-Carousel-slide .card .place-bid button {
+  width: 100%;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: 0.05em;
+  color: #fff;
+}
+
 .heading {
   position: relative;
   font-weight: 700;
