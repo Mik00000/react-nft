@@ -13,6 +13,7 @@ import Header from "./sections/Header";
 import Hero from "./sections/Hero";
 import Partners from "./sections/Partners";
 import Auctions from "./sections/Auctions";
+import HowItWorks from "./sections/HowItWorks";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
                 <Hero />
                 <Partners />
                 <Auctions />
+                <HowItWorks/>
               </>
             }
           />

@@ -7,6 +7,7 @@ interface buttonInterface {
   textColor: string;
   padding: string;
   children: ReactNode;
+  style?:object;
 }
 
 const Button = ({
@@ -15,7 +16,8 @@ const Button = ({
   borderColor,
   textColor,
   padding,
-  children
+  children,
+  style
 }: buttonInterface) => {
   const getRGBA = (color: string, opacity: number) => {
     if (color.startsWith("#")) {
@@ -38,7 +40,8 @@ const Button = ({
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        transition: "background-color 0.3s ease"
+        transition: "background-color 0.3s ease",
+        ...style
       }}
       onMouseEnter={(e) => {
         (e.target as HTMLButtonElement).style.backgroundColor = getRGBA(bgColor, bgOpacity + 0.2);
